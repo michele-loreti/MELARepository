@@ -1,0 +1,2 @@
+Initial condition - time 0.0 - no actions  
+moveS 1 Spatial x ([0, 0],[0, 0]) x 
