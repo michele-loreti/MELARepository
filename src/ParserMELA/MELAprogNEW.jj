@@ -431,6 +431,20 @@ void NoInfAction(Agent agent) throws NumberFormatException, RuntimeException, Pa
     String updateString = update.image;
     String[] updateArray = {updateString};
     NoInfAction ac = new NoInfAction(name.image, rate, symbol.image, updateArray);
+    Rule r = new Rule() {
+    	
+	public ActionStep apply(AgentManager am, LocationManager lm, int locationIndex) {
+	
+		int agentIndex = am.getIndexOf( agent.getName() );
+		double rate =  lm.getNumberOfAgentsAt(locationIndex,agentIndex)*GlobalManager.getParamManager().getParamValue(rateName.image);
+		LinkedList<AgentVariation> variations = new LinkedList<>();
+		au( new AgentVariation(...)) 
+	
+		
+	}
+    
+    }
+    agent.addRule( r );
     agent.addAction(ac);}}        
 }  
     
